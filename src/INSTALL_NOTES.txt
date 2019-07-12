@@ -1,0 +1,15 @@
+# Additional install notes:
+
+# library requires libxml2:
+sudo apt install libxml2-dev
+
+# set RAVEROOT environment variable, for example if rave installed in /opt/baltrad/rave:
+# NOTE: leave out the rave folder itself, it has to be the parent directory!!
+export RAVEROOT=/opt/baltrad
+
+# compile
+make
+
+# install
+# note that as super user the RAVEROOT environment variable is no longer available, so have to add it again
+sudo make install RAVEROOT=/opt/baltrad
